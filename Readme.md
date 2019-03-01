@@ -10,4 +10,4 @@ All written in .NET core. The HTTP API and server is hosted on a Raspberry Pi. T
 
 DO NOTE that I haven't committed any code yet to this repo (other than the templates), but I have made an entire PoC that proves that I am able to do what I want ... Sort of (you have to have the app open, but that is fine for now :). In the following weeks and months I will structure my PoC and make it public bit by bit.
 
-My first task though, is to make it easily deployable and testable through the Raspberry Pi.
+My first task though, is to make it easily deployable and testable on the Raspberry Pi.
