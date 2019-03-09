@@ -1,1 +1,1 @@
-echo "deploy with creds $1 - $2"
+echo "deploy with creds $1:$2&$3"
