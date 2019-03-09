@@ -7,6 +7,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NearField.Management.WebApi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NearField.TentacleServer", "NearField.TentacleServer\NearField.TentacleServer.csproj", "{E9D8BDC3-5A9D-446A-9269-042AD280FE19}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{D5BA6793-FF04-42AA-8D28-7BBF6C45725D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy_scripts", "deploy_scripts", "{58FCA348-AB11-46EA-941D-80D016407DC2}"
+	ProjectSection(SolutionItems) = preProject
+		..\tools\deploy_scripts\deploy_to_raspberry_pi.sh = ..\tools\deploy_scripts\deploy_to_raspberry_pi.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build_scripts", "build_scripts", "{43B4E7BE-987C-49FE-AC91-218531B220E6}"
+	ProjectSection(SolutionItems) = preProject
+		..\tools\build_scripts\Makefile = ..\tools\build_scripts\Makefile
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +36,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{58FCA348-AB11-46EA-941D-80D016407DC2} = {D5BA6793-FF04-42AA-8D28-7BBF6C45725D}
+		{43B4E7BE-987C-49FE-AC91-218531B220E6} = {D5BA6793-FF04-42AA-8D28-7BBF6C45725D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F5BC511-7767-4BEE-A119-7884D374EC3D}
