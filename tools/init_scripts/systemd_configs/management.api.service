@@ -1,0 +1,13 @@
+[Unit]
+Description=Management API for the NearField
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/opt/nearfield/deploy_service/management-webapi/NearField.Management.WebApi --urls=http://0.0.0.0:5001
+
+[Install]
+WantedBy=multi-user.target

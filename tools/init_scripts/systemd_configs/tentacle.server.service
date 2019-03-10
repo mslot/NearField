@@ -1,0 +1,13 @@
+[Unit]
+Description=Management API for the NearField
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=dotnet /opt/nearfield/deploy_service/tentacle-server/NearField.TentacleServer
+
+[Install]
+WantedBy=multi-user.target
