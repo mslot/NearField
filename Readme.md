@@ -16,9 +16,9 @@ My first task though, is to make it easily deployable and testable on the Raspbe
 # DEPLOY
 To make a deploy to the Raspberry Pi set the following three environment variables:
 
-1. DEPLOY_NEARFIELD_IP - the IP of the Raspberry Pi
-2. DEPLOY_NEARFIELD_USER  - the ssh user to login to the Raspberry Pi
-3. DEPLOY_NEARFIELD_DEST_FOLDER - the destination folder
+1. *DEPLOY_NEARFIELD_IP* - the IP of the Raspberry Pi
+2. *DEPLOY_NEARFIELD_USER*  - the ssh user to login to the Raspberry Pi
+3. *DEPLOY_NEARFIELD_DEST_FOLDER* - the destination folder
 
 Notice to 3) is that two folders is created:
 
