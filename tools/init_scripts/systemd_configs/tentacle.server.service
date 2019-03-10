@@ -1,5 +1,5 @@
 [Unit]
-Description=Management API for the NearField
+Description=Tentacle server for NearField
 After=network.target
 StartLimitIntervalSec=0
 
