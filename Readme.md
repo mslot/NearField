@@ -19,7 +19,7 @@ To make a deploy to the Raspberry Pi set the following three environment variabl
 
 1. *DEPLOY_NEARFIELD_IP* - the IP of the Raspberry Pi
 2. *DEPLOY_NEARFIELD_USER*  - the ssh user to login to the Raspberry Pi
-3. *DEPLOY_NEARFIELD_DEST_FOLDER* - the destination folder - for now it is hardcoded to use "/opt/nearfield/deploy" in the systemd service files located at /tools/init_scripts/systemd_configs, so please point this environment variable to /opt/nearfield/deploy, or you need to manually change the service files! This is gonna be configurable in the future.
+3. *DEPLOY_NEARFIELD_DEST_FOLDER* - the destination folder - for now it is hardcoded to use ```/opt/nearfield/deploy``` in the systemd service files located at ```/tools/init_scripts/systemd_configs```, so please point this environment variable to ```/opt/nearfield/deploy```, or you need to manually change the service files! This is gonna be configurable in the future.
 
 Notice to 3) is that two folders is created:
 
