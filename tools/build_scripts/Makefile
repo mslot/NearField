@@ -1,11 +1,10 @@
+# DEPLOY_NEARFIELD_IP can be set as an environment variable: "export DEPLOY_NEARFIELD_IP=ip"
+# DEPLOY_NEARFIELD_USER can be set as an environment variable: "export DEPLOY_NEARFIELD_USER=user"
+# DEPLOY_NEARFIELD_DEST_FOLDER can be set as an environment variable: "export DEPLOY_NEARFIELD_DEST_FOLDER=folder"
 
-# SSH_NEARFIELD_IP can be set as an environment variable: "export SSH_NEARFIELD_UP=ip"
-# SSH_NEARFILD_USER can be set as an environment variable: "export SSH_NEARFIELD_USER=user"
-SSH_NEARFIELD_PASSWORD ?= $(shell bash -c 'read -s -p "Password: " pwd; echo $$pwd')
+.PHONY: clean deploy build build-management-webapi build-tentacle-server copy-init-scripts
 
-.PHONY: deploy build build-management-webapi build-tentacle-server copy-init-scripts
-
-build: build-management-webapi build-tentacle-server copy-init-scripts
+build: clean build-management-webapi build-tentacle-server copy-init-scripts deploy
 
 build-management-webapi:
 	 cd ../../src/NearField.Management.WebApi && dotnet.exe publish -r linux-arm -o ../../publish/management-webapi
@@ -17,4 +16,7 @@ copy-init-scripts:
 	cd ../ && mkdir -p ../publish/init_scripts && cp -r init_scripts ../publish
 
 deploy:
-	@cd ../deploy_scripts/ && ./deploy_to_raspberry_pi.sh $(SSH_NEARFIELD_USER) $(SSH_NEARFIELD_PASSWORD) $(SSH_NEARFIELD_IP)
+	@cd ../deploy_scripts/ && ./deploy_to_raspberry_pi.sh $(DEPLOY_NEARFIELD_USER) $(DEPLOY_NEARFIELD_IP) $(DEPLOY_NEARFIELD_DEST_FOLDER) $(RSYNC_PASSWORD)
+
+clean:
+	cd ../../ && rm -rf publish/
