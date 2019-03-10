@@ -14,6 +14,8 @@ DO NOTE that I haven't committed any code yet to this repo (other than the templ
 My first task though, is to make it easily deployable and testable on the Raspberry Pi.
 
 # DEPLOY
+**DO NOTICE THAT I HAVEN'T FINISHED THE DPELOY YET, SO IT IS NOT WORKING**
+
 To make a deploy to the Raspberry Pi set the following three environment variables:
 
 1. *DEPLOY_NEARFIELD_IP* - the IP of the Raspberry Pi
