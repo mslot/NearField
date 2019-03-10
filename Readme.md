@@ -44,7 +44,7 @@ If you only want to deploy:
 
 ## DO NOTE
 
-1. Systemd services is hardcoded to /opt/nearfield/deploy_service
+1. Systemd services is hardcoded to ```/opt/nearfield/deploy_service```
 2. Management api is hardcoded to use http and port 5001 (this is gonna change when things get more stable)
 3. I am not a Linux wizard, so my deployment script proberly sucks big time, but it helps me a lot, so I can test it quickly on the Raspberry Pi - I am open for suggestions on how to improve it
 
