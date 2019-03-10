@@ -7,7 +7,7 @@ StartLimitIntervalSec=0
 Type=simple
 Restart=always
 RestartSec=1
-ExecStart=dotnet /opt/nearfield/deploy_service/tentacle-server/NearField.TentacleServer
+ExecStart=/opt/nearfield/deploy_service/tentacle-server/NearField.TentacleServer
 
 [Install]
 WantedBy=multi-user.target

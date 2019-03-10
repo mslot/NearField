@@ -14,13 +14,12 @@ DO NOTE that I haven't committed any code yet to this repo (other than the templ
 My first task though, is to make it easily deployable and testable on the Raspberry Pi.
 
 # DEPLOY
-**DO NOTICE THAT I HAVEN'T FINISHED THE DPELOY YET, SO IT IS NOT WORKING**
 
 To make a deploy to the Raspberry Pi set the following three environment variables:
 
 1. *DEPLOY_NEARFIELD_IP* - the IP of the Raspberry Pi
 2. *DEPLOY_NEARFIELD_USER*  - the ssh user to login to the Raspberry Pi
-3. *DEPLOY_NEARFIELD_DEST_FOLDER* - the destination folder
+3. *DEPLOY_NEARFIELD_DEST_FOLDER* - the destination folder - for now it is hardcoded to use "/opt/nearfield/deploy" in the systemd service files located at /tools/init_scripts/systemd_configs, so please point this environment variable to /opt/nearfield/deploy, or you need to manually change the service files! This is gonna be configurable in the future.
 
 Notice to 3) is that two folders is created:
 
@@ -42,4 +41,10 @@ If you only want to build:
 If you only want to deploy:
 
 1. run ```make deploy``` - be sure to publish to the publish/ folder that is a sibling of the src/ folder
+
+## DO NOTE
+
+1. Systemd services is hardcoded to /opt/nearfield/deploy_service
+2. Management api is hardcoded to use http and port 5001 (this is gonna change when things get more stable)
+3. I am not a Linux wizard, so my deployment script proberly sucks big time, but it helps me a lot, so I can test it quickly on the Raspberry Pi - I am open for suggestions on how to improve it
 
