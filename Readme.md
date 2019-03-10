@@ -1,3 +1,4 @@
+# PREAMBLE
 I need to be able to turn off and on my Hue lights by simply being near a beacon with my phone. I have done some PoCs (that I have kept for my self), but now I am ready to structure it a bit more (hence this project).
 
 It is going to be divided up in two (actually three parts):
