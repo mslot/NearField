@@ -5,7 +5,7 @@ service_folder="$3_service"
 
 ssh -t $1@$2 "sudo mkdir -p $staging_folder; sudo mkdir -p $service_folder; sudo chown -R $1 $staging_folder; sudo chgrp -R $1 $service_folder; sudo chown -R $1 $service_folder; sudo chgrp -R $1 $staging_folder;"
 
-rsync --delete -r ../../publish/* $1@$2:$staging_folder
+rsync --delete -W -r ../../publish/* $1@$2:$staging_folder
 
 echo "code deployed successfully to staging folder"
 

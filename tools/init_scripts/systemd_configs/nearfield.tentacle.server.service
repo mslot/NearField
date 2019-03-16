@@ -4,9 +4,10 @@ After=network.target
 StartLimitIntervalSec=0
 
 [Service]
-Type=simple
-Restart=always
-RestartSec=1
+Type=oneshot
+#Restart=always
+#RestartSec=1
+WorkingDirectory=/opt/nearfield/deploy_service/tentacle-server
 ExecStart=/opt/nearfield/deploy_service/tentacle-server/NearField.TentacleServer
 
 [Install]
