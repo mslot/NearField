@@ -6,7 +6,8 @@ mkdir -p $2
 echo "created/modified $2"
 
 echo "copy service file to systemd/system folder"
-sudo -s cp $1/init_scripts/systemd_configs/nearfield.management.api.service /etc/systemd/system/nearfield.management.api.service sudo -s cp $1/init_scripts/systemd_configs/nearfield.tentacle.server.service /etc/systemd/system/nearfield.tentacle.server.servi$
+sudo -s cp $1/init_scripts/systemd_configs/nearfield.management.api.service /etc/systemd/system/nearfield.management.api.service 
+sudo -s cp $1/init_scripts/systemd_configs/nearfield.tentacle.server.service /etc/systemd/system/nearfield.tentacle.server.servi$
 
 echo "stopping services"
 sudo -s systemctl stop nearfield.management.api.service
